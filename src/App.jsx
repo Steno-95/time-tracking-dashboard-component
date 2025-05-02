@@ -1,6 +1,6 @@
 import { useState } from "react";
 import CardActivity from "./components/Card/CardActivity";
-import UserCard from "./components/userCard/userCard";
+import UserCard from "./components/userCard/UserCard";
 import AppLayout from "./ui/AppLayout";
 import Footer from "./ui/Footer";
 import useData from "./hooks/useData";
