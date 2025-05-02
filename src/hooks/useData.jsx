@@ -5,7 +5,7 @@ function useData() {
 
   useEffect(() => {
     async function getData() {
-      const res = await fetch("data.json");
+      const res = await fetch("/data.json");
       if (!res.ok) return console.log("couldn't fetch data");
       const data = await res.json();
       setContent(data);
