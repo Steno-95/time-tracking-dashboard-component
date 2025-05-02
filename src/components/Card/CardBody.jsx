@@ -15,7 +15,7 @@ function CardBody({ content, time }) {
       : "Last Month";
 
   return (
-    <div className="grid grid-cols-2 bg-(--card-bg) px-5 py-8 h-fit rounded-t-xl absolute w-full bottom-0 z-2 items-center justify-center hover:bg-(--hover-color) sm:py-5 sm:h-[12rem] ">
+    <div className="grid grid-cols-2 bg-(--card-bg) px-4 py-8 h-fit rounded-t-xl absolute w-full bottom-0 z-2 items-center justify-center hover:bg-(--hover-color) sm:py-5 sm:h-[12rem]">
       <h2 className="text-(--active-text) font-medium">{title}</h2>
 
       <button className="justify-self-end cursor-pointer">
@@ -31,10 +31,10 @@ function CardBody({ content, time }) {
           />
         </svg>
       </button>
-      <p className="text-(--active-text) font-light text-[1.5rem] sm:text-[3rem] sm:col-start-1 sm:col-end-2 sm:">
+      <p className="text-(--active-text) font-light text-[1.5rem] sm:text-[3rem] sm:col-start-1 sm:col-end-2 ">
         {timeframes[time].current}hrs
       </p>
-      <h3 className="justify-self-end text-(--active-text) text-[.9rem]! sm:col-span-2 sm:row-start-3 sm:justify-self-start">
+      <h3 className="justify-self-end text-(--active-text) text-[.9rem]! sm:col-span-2 sm:row-start-3 sm:justify-self-start w-fit">
         {occurence} - {timeframes[time].previous}hrs
       </h3>
     </div>
