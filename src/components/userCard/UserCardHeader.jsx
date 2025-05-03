@@ -5,12 +5,12 @@ function UserCardHeader({ image, username }) {
         <img src={`/images/image-${image}.png`} alt={`${username} photo`} />
       </figure>
       <div className="md:space-y-3">
-        <h4 className="text-(--active-text) font-light sm:text-[1rem]!">
+        <span className="text-(--active-text) font-light sm:text-[1rem]!">
           Report for
-        </h4>
-        <h1 className="text-(--active-text) font-light sm:text-[2rem]! md:text-[2.5rem]! md:leading-10">
+        </span>
+        <h2 className="text-(--active-text) font-light sm:text-[2rem]! md:text-[2.5rem]! md:leading-10">
           {username}
-        </h1>
+        </h2>
       </div>
     </header>
   );

@@ -7,13 +7,13 @@ function CardActivity({ content, time }) {
   const style = { background: `var(--${icon}-color)` };
 
   return (
-    <section
+    <article
       className="relative min-h-[10rem] overflow-hidden rounded-xl sm:min-h-[15rem] "
       style={style}
     >
       <CardIcon icon={icon} />
       <CardBody content={content} time={time} />
-    </section>
+    </article>
   );
 }
 

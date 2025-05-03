@@ -4,9 +4,6 @@ function CardBody({ content, time }) {
 
   const { title, timeframes } = content;
 
-  console.log(time);
-  console.log(timeframes[time]);
-
   const occurence =
     time[0] === "d"
       ? "Yesterday"
@@ -15,15 +12,20 @@ function CardBody({ content, time }) {
       : "Last Month";
 
   return (
-    <div className="grid grid-cols-2 bg-(--card-bg) px-4 py-8 h-fit rounded-t-xl absolute w-full bottom-0 z-2 items-center justify-center hover:bg-(--hover-color) sm:py-5 sm:h-[12rem]">
+    <article className="grid grid-cols-2 bg-(--card-bg) px-4 py-8 h-fit rounded-t-xl absolute w-full bottom-0 z-2 items-center justify-center hover:bg-(--hover-color) sm:py-5 sm:h-[12rem]">
       <h2 className="text-(--active-text) font-medium">{title}</h2>
 
-      <button className="justify-self-end cursor-pointer">
+      <button
+        className="justify-self-end cursor-pointer hover:scale-110 focus:scale-110 fill-(--active-text) focus:fill-white hover:fill-white focus:outline-none"
+        aria-label="Menu"
+      >
         <svg
           width="21"
           height="5"
           xmlns="http://www.w3.org/2000/svg"
-          className="fill-(--active-text) hover:fill-white hover:scale-110 "
+          className="fill-inherit  hover:scale-110"
+          aria-hidden="true"
+          focusable="false"
         >
           <path
             d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
@@ -34,10 +36,10 @@ function CardBody({ content, time }) {
       <p className="text-(--active-text) font-light text-[1.5rem] sm:text-[3rem] sm:col-start-1 sm:col-end-2 ">
         {timeframes[time].current}hrs
       </p>
-      <h3 className="justify-self-end text-(--active-text) text-[.9rem]! sm:col-span-2 sm:row-start-3 sm:justify-self-start w-fit">
+      <p className="justify-self-end text-(--active-text) text-[.9rem]! sm:col-span-2 sm:row-start-3 sm:justify-self-start w-fit">
         {occurence} - {timeframes[time].previous}hrs
-      </h3>
-    </div>
+      </p>
+    </article>
   );
 }
 
